@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935">
   <hashTree>
-    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Zero bank test" enabled="true">
       <stringProp name="TestPlan.comments"></stringProp>
       <boolProp name="TestPlan.functional_mode">false</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
@@ -27,7 +27,7 @@
         <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Home Page" enabled="true">
           <collectionProp name="ModuleController.node_path">
             <stringProp name="764597751">Test Plan</stringProp>
-            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="-1725992802">Zero bank test</stringProp>
             <stringProp name="581079344">HOME PAGE</stringProp>
           </collectionProp>
         </ModuleController>
@@ -35,7 +35,7 @@
         <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Log In" enabled="true">
           <collectionProp name="ModuleController.node_path">
             <stringProp name="764597751">Test Plan</stringProp>
-            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="-1725992802">Zero bank test</stringProp>
             <stringProp name="-2044045407">LOG IN</stringProp>
           </collectionProp>
         </ModuleController>
@@ -92,7 +92,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Verify being on homepage" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="-1721827191">&lt;title&gt;Zero - Personal Banking - Loans - Credit Cards&lt;/title&gt;</stringProp>
             </collectionProp>
@@ -125,7 +125,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Get user token" enabled="true">
             <stringProp name="RegexExtractor.useHeaders">false</stringProp>
             <stringProp name="RegexExtractor.refname">token</stringProp>
             <stringProp name="RegexExtractor.regex">name=&quot;user_token&quot; value=&quot;(.+?)&quot;</stringProp>
@@ -240,7 +240,7 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Verify return to homepage" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="-1721827191">&lt;title&gt;Zero - Personal Banking - Loans - Credit Cards&lt;/title&gt;</stringProp>
             </collectionProp>
@@ -401,7 +401,7 @@
         <boolProp name="ResultCollector.success_only_logging">true</boolProp>
       </ResultCollector>
       <hashTree/>
-      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
+      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="Test Script Recorder" enabled="true">
         <stringProp name="ProxyControlGui.port"></stringProp>
         <collectionProp name="ProxyControlGui.exclude_list">
           <stringProp name="-2063843150">(?i).*\.(bmp|css|js|gif|ico|jpe?g|png|swf|woff|woff2)</stringProp>
